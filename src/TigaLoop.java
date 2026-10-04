@@ -34,6 +34,18 @@ public class TigaLoop {
         }  while (k <= n);
         System.out.println();
 
-
+        // Bukti off-by-one
+        // Bukti meleset satu (off-by-one) dengan dua penghitung terpisah.
+        int kurang = 0;
+        for (int i = 1; i <= n; i++) {
+            kurang++;
+        }
+        int kurangSama = 0;
+        for (int i = 1; i <= n; i++) {
+            kurangSama++;
+        }
+        System.out.println();
+        System.out.println("i <  n berputar : " + kurang + " kali");
+        System.out.println("i <= n berputar : " + kurangSama + " kali");
     }
 }
