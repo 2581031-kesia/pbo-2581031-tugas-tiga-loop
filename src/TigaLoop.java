@@ -12,7 +12,7 @@ public class TigaLoop {
         // 1. Versi for (variabel pencacah: i)
         System.out.print("for      :");
         for (int i = 1; i <= n; i++) {
-            System.out.println(" " + i);
+            System.out.print(" " + i);
         }
         System.out.println();
 
@@ -20,7 +20,7 @@ public class TigaLoop {
         System.out.print("while    :");
         int j = 1;
         while (j <= n) {
-            System.out.println(" " + j);
+            System.out.print(" " + j);
             j++; // jangan lupa dinaikkan, kalau tidak program akan menggantung
         }
         System.out.println();
@@ -29,23 +29,8 @@ public class TigaLoop {
         System.out.print("do-while :");
         int k = 1;
         do {
-            System.out.println(" " + k);
+            System.out.print(" " + k);
             k++;
         }  while (k <= n);
         System.out.println();
 
-        // Bukti off-by-one
-        // Bukti meleset satu (off-by-one) dengan dua penghitung terpisah.
-        int kurang = 0;
-        for (int i = 1; i <= n; i++) {
-            kurang++;
-        }
-        int kurangSama = 0;
-        for (int i = 1; i <= n; i++) {
-            kurangSama++;
-        }
-        System.out.println();
-        System.out.println("i <  n berputar : " + kurang + " kali");
-        System.out.println("i <= n berputar : " + kurangSama + " kali");
-    }
-}
